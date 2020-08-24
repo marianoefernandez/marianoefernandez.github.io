@@ -1,11 +1,26 @@
 <!doctype html>
 <html>
   <head>
-    <title>1388</title>
+    <title>Да играем отново</title>
   </head>
   <body>
-    <p><strong>1388</strong></p>
+    <p><strong>Да играем отново</strong></p>
   </body>
+
+<button type="button" onclick="document.querySelector('button').addEventListener('click', async (e) => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: true
+    })  
+    document.querySelector('video').srcObject = stream
+  } catch(e) {
+    console.error(e)
+  }
+  	  alert ('Благодаря, че си игра с мен, Виктория :)')
+})
+">Добре дошли :)</button>
+
+
 
 <!--
   <button type="button" onclick="var ria;
